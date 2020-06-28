@@ -52,7 +52,8 @@ class EstablecimientoController extends Controller
         $ruta_imagen = $request['imagen_principal']->store('principales','public');
 
         //resize a la imagen
-        $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(800,600);
+        //$img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(800,600);
+        $img = $request->file('file');
         $img->save();
 
         //guardar db
@@ -157,9 +158,10 @@ class EstablecimientoController extends Controller
                 $ruta_imagen = $request['imagen_principal']->store('principales','public');
 
                 //resize a la imagen
-                $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(800,600);
+                //$img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(800,600);
+                $img = $request->file('file');
                 $img->save();
-
+                $request->file('file');
                 $establecimiento->imagen_principal = $ruta_imagen;
             }
 
