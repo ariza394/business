@@ -156,12 +156,10 @@ class EstablecimientoController extends Controller
             if(request('imagen_principal')){
                 //guarda imagen
                 $ruta_imagen = $request['imagen_principal']->store('principales','public');
-
+                //dd($data);
                 //resize a la imagen
-                //$img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(800,600);
-                $img = $request->file('file');
-                $img->save();
-                $request->file('file');
+                $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(800,600);
+                $img->save();                
                 $establecimiento->imagen_principal = $ruta_imagen;
             }
 
