@@ -54309,7 +54309,7 @@ var render = function() {
               _c("img", {
                 staticClass: "card-img-top show-main",
                 attrs: {
-                  src: "storage/" + restaurante.imagen_principal,
+                  src: "images/" + restaurante.imagen_principal + ".jpg",
                   alt: "img-cafe"
                 }
               }),
