@@ -8,6 +8,10 @@ export default new Vuex.Store({
         cafes:[],
         restaurantes:[],
         hoteles:[],
+        bares:[],
+        hospitales:[],
+        gimnasios:[],
+        doctores:[],
         establecimiento:{},
         establecimientos:[],
         categorias:[],
@@ -22,6 +26,18 @@ export default new Vuex.Store({
         },
         AGREGAR_HOTELES(state,hoteles){
             state.hoteles = hoteles;
+        },
+        AGREGAR_BARES(state,bares){
+            state.bares = bares;
+        },
+        AGREGAR_HOSPITALES(state,hospitales){
+            state.hospitales = hospitales;
+        },
+        AGREGAR_GIMNACIO(state,gimnasios){
+            state.gimnasios = gimnasios;
+        },
+        AGREGAR_DOCTORES(state,doctores){
+            state.doctores = doctores;
         },
         AGREGAR_ESTABLECIMIENTO(state,establecimiento){
             state.establecimiento = establecimiento;

@@ -31,7 +31,7 @@ class EstablecimientoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   
+    {   /* -------------------THIS IS LOCAL-HOST-------------------
         //validacion
         $data = $request->validate([
             'nombre' => 'required',
@@ -70,7 +70,7 @@ class EstablecimientoController extends Controller
             'apertura' => $data['apertura'],
             'cierre' => $data['cierre'],
             'uuid' => $data['uuid']
-        ]);*/
+        ]);
 
         //o asi
         $establecimiento = new Establecimiento($data);
@@ -78,7 +78,42 @@ class EstablecimientoController extends Controller
         $establecimiento->user_id = auth()->user()->id;
         $establecimiento->save();
 
+        return back()->with('estado','Your Information was saved');*/
+
+        /////////////////////////////////PRODUCTION///////////////////////////////
+        $data = $request->validate([
+            'nombre' => 'required',
+            'categoria_id' => 'required|exists:App\Categoria,id',
+            'direccion' => 'required',
+            'colonia' => 'required',
+            'lat' => 'required',
+            'lng' => 'required',
+            'telefono' => 'required|numeric',
+            'descripcion' => 'required|min:20',
+            'apertura' => 'date_format:H:i',
+            'cierre' => 'date_format:H:i|after:apertura',
+            'uuid' => 'required|uuid'
+        ]);
+            $numeroRand = random_int(1,4);
+            $categoria2 = Categoria::findOrFail($data['categoria_id']);
+            $nombreCategoria = 'main-'.$categoria2->slug.$numeroRand;
+        auth()->user()->establecimiento()->create([
+            'nombre' => $data['nombre'],
+            'categoria_id' => $data['categoria_id'],
+            'imagen_principal' => $nombreCategoria,
+            'direccion' => $data['direccion'],
+            'colonia' => $data['colonia'],
+            'lat' => $data['lat'],
+            'lng' => $data['lng'],
+            'telefono' => $data['telefono'],
+            'descripcion' => $data['descripcion'],
+            'apertura' => $data['apertura'],
+            'cierre' => $data['cierre'],
+            'uuid' => $data['uuid']
+        ]);
+
         return back()->with('estado','Your Information was saved');
+
     }
 
     /**

@@ -2,9 +2,13 @@
     <div>
         <listado-categorias></listado-categorias>
         <mapa-establecimientos></mapa-establecimientos>
-        <categoria-cafe></Categoria-cafe>
         <categoria-restaurant></Categoria-restaurant>
+        <categoria-cafe></Categoria-cafe>
         <categoria-hotel></categoria-hotel>
+        <categoria-bar></categoria-bar>
+        <categoria-hospital></categoria-hospital>
+        <categoria-gimnasio></categoria-gimnasio>
+        <categoria-doctor></categoria-doctor>
     </div>
 </template>
 <script>
@@ -14,6 +18,10 @@
     import CategoriaCafe from './CategoriaCafe'; 
     import CategoriaRestaurant from './CategoriaRestaurant'; 
     import CategoriaHotel from './CategoriaHotel';
+    import CategoriaBar from './CategoriaBar';
+    import CategoriaHospital from './CategoriaHospital';
+    import CategoriaGimnasio from './CategoriaGimnasio';
+    import CategoriaDoctor from './CategoriaDoctor';
 
     export default {
         components:{            
@@ -21,7 +29,11 @@
             MapaEstablecimientos,
             CategoriaCafe,
             CategoriaRestaurant,
-            CategoriaHotel            
+            CategoriaHotel,
+            CategoriaBar,
+            CategoriaHospital,
+            CategoriaGimnasio,
+            CategoriaDoctor         
         }
     }
 </script>

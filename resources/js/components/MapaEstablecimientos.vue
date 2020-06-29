@@ -38,12 +38,12 @@ export default {
     data() {
         return {
             zoom: 13,
-            center: latLng(20.666332695977, -103.392177745699),
+            center: latLng(-36.849761, 174.7628903),
             url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
             attribution:
                 '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
             currentZoom: 11.5,
-            currentCenter: latLng(20.666332695977, -103.392177745699),
+            currentCenter: latLng(-36.849761, 174.7628903),
             showParagraph: false,
             mapOptions: {
                 zoomSnap: 0.5

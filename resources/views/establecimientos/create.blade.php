@@ -74,7 +74,9 @@
                                 type="file"
                                 class="form-control @error('imagen_principal') is-invalid  @enderror"
                                 value="{{old('imagen_principal')}}"
+                                disabled
                             >
+                            <h6>This option is not available in production by costs</h6>
 
                             @error('imagen_principal')
                                 <span class="invalid-feedback d-block" role="alert">
@@ -96,10 +98,10 @@
                                 type="text"
                                 placeholder="Street"
                                 class="form-control"
+                                disabled
                             >
-                            <p class="text-secondary mt-5 mb-3 text-center">Move your Pin where you need it Or write your address</p>
+                            <h3 class="text-center">Move you pin</h3>
                         </div>
-
                         <div class="form-group">
                             <div id="mapa" style="height:400px"></div>
                         </div>
@@ -223,7 +225,8 @@
                         <legend class="text-primary">Images</legend>
                         <div class="form-group">
                             <label for="imagenes">Images</label>
-                            <div id="dropzone" class="dropzone form-control"></div>
+                            <h3>Images with dropzone are not avaiblable in production by costs</h3>
+                           {{--}} <div id="dropzone" class="dropzone form-control"></div>{{--}}
                         </div>
                     </fieldset>
 
@@ -255,7 +258,7 @@
             const dropzone = new Dropzone('div#dropzone',{
                 url:'/imagenes/store',
                 dictDefaultMessage:'Up to 10 Images',
-                maxFiles:10,
+                maxFiles:0,
                 required:true,
                 acceptedFiles:".png,.jpg,.gif,.jpeg",
                 addRemoveLinks:true,
