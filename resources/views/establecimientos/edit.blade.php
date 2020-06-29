@@ -85,7 +85,7 @@
                             @enderror
                         </div>
                         <!--<img style="width:200px;" src="/storage/{{$establecimiento->imagen_principal}}">-->
-                        <img style="width:200px;" src="{{asset("images/$establecimiento->imagen_principal.jpg")}}">
+                        <img style="width:200px;" src="{{secure_asset("images/$establecimiento->imagen_principal.jpg")}}">
                     </fieldset>
 
                     <fieldset class="border p-4 mt-5">
