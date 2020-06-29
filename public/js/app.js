@@ -2091,7 +2091,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/api/categorias/gimnasio').then(function (respuesta) {
+    axios.get('/api/categorias/gimnacio').then(function (respuesta) {
       _this.$store.commit("AGREGAR_GIMNACIO", respuesta.data);
     });
   },

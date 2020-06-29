@@ -26,7 +26,7 @@
 <script>
 export default {
     mounted(){
-        axios.get('/api/categorias/gimnasio')
+        axios.get('/api/categorias/gimnacio')
             .then(respuesta => {
                 this.$store.commit("AGREGAR_GIMNACIO",respuesta.data)
             })
