@@ -2646,7 +2646,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -54700,7 +54699,7 @@ var render = function() {
           _c("img", {
             staticClass: "img-fluid",
             attrs: {
-              src: "storage/" + _vm.establecimiento.imagen_principal,
+              src: "../storage/" + _vm.establecimiento.imagen_principal,
               alt: "imagen"
             }
           }),
@@ -54709,11 +54708,7 @@ var render = function() {
             _vm._v(_vm._s(_vm.establecimiento.descripcion))
           ]),
           _vm._v(" "),
-          _c("galeria-imagenes"),
-          _vm._v(" "),
-          _c("h6", [
-            _vm._v("In production images is not working due the costs")
-          ])
+          _c("galeria-imagenes")
         ],
         1
       ),

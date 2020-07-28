@@ -4,10 +4,9 @@
 
         <div class="row align-items-start">
             <div class="col-md-8 order-2">
-                <img :src="`storage/${establecimiento.imagen_principal}`" class="img-fluid" alt="imagen">
+                <img :src="`../storage/${establecimiento.imagen_principal}`" class="img-fluid" alt="imagen">
                 <p class="mt-3">{{establecimiento.descripcion}}</p>
                 <galeria-imagenes></galeria-imagenes>
-                <h6>In production images is not working due the costs</h6>
             </div>
             <aside class="col-md-4 order-1">
                 <div>   
