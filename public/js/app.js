@@ -2240,6 +2240,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     var _this = this;
@@ -53716,11 +53717,8 @@ var render = function() {
         return _c("div", { key: Bar.id, staticClass: "col-md-4 mt-4" }, [
           _c("div", { staticClass: "card" }, [
             _c("img", {
-              staticClass: "card-img-top show-main",
-              attrs: {
-                src: "images/" + Bar.imagen_principal + ".jpg",
-                alt: "img-cafe"
-              }
+              staticClass: "card-img-top",
+              attrs: { src: "storage/" + Bar.imagen_principal, alt: "img-cafe" }
             }),
             _vm._v(" "),
             _c(
@@ -53813,9 +53811,9 @@ var render = function() {
         return _c("div", { key: cafe.id, staticClass: "col-md-4 mt-4" }, [
           _c("div", { staticClass: "card" }, [
             _c("img", {
-              staticClass: "card-img-top show-main",
+              staticClass: "card-img-top",
               attrs: {
-                src: "images/" + cafe.imagen_principal + ".jpg",
+                src: "storage/" + cafe.imagen_principal,
                 alt: "img-cafe"
               }
             }),
@@ -53910,9 +53908,9 @@ var render = function() {
         return _c("div", { key: doctor.id, staticClass: "col-md-4 mt-4" }, [
           _c("div", { staticClass: "card" }, [
             _c("img", {
-              staticClass: "card-img-top show-main",
+              staticClass: "card-img-top",
               attrs: {
-                src: "images/" + doctor.imagen_principal + ".jpg",
+                src: "storage/" + doctor.imagen_principal,
                 alt: "img-cafe"
               }
             }),
@@ -54007,9 +54005,9 @@ var render = function() {
         return _c("div", { key: gimnasio.id, staticClass: "col-md-4 mt-4" }, [
           _c("div", { staticClass: "card" }, [
             _c("img", {
-              staticClass: "card-img-top show-main",
+              staticClass: "card-img-top",
               attrs: {
-                src: "images/" + gimnasio.imagen_principal + ".jpg",
+                src: "storage/" + gimnasio.imagen_principal,
                 alt: "img-cafe"
               }
             }),
@@ -54107,9 +54105,9 @@ var render = function() {
         return _c("div", { key: hospital.id, staticClass: "col-md-4 mt-4" }, [
           _c("div", { staticClass: "card" }, [
             _c("img", {
-              staticClass: "card-img-top show-main",
+              staticClass: "card-img-top",
               attrs: {
-                src: "images/" + hospital.imagen_principal + ".jpg",
+                src: "storage/" + hospital.imagen_principal,
                 alt: "img-cafe"
               }
             }),
@@ -54207,9 +54205,9 @@ var render = function() {
         return _c("div", { key: Hotel.id, staticClass: "col-md-4 mt-4" }, [
           _c("div", { staticClass: "card" }, [
             _c("img", {
-              staticClass: "card-img-top show-main",
+              staticClass: "card-img-top",
               attrs: {
-                src: "images/" + Hotel.imagen_principal + ".jpg",
+                src: "storage/" + Hotel.imagen_principal,
                 alt: "img-cafe"
               }
             }),
@@ -54307,9 +54305,9 @@ var render = function() {
           [
             _c("div", { staticClass: "card" }, [
               _c("img", {
-                staticClass: "card-img-top show-main",
+                staticClass: "card-img-top",
                 attrs: {
-                  src: "images/" + restaurante.imagen_principal + ".jpg",
+                  src: "storage/" + restaurante.imagen_principal,
                   alt: "img-cafe"
                 }
               }),
