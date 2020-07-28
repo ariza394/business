@@ -74,9 +74,7 @@
                                 type="file"
                                 class="form-control @error('imagen_principal') is-invalid  @enderror"
                                 value="{{old('imagen_principal')}}"
-                                disabled
                             >
-                            <h6>This option is not available in production by costs</h6>
 
                             @error('imagen_principal')
                                 <span class="invalid-feedback d-block" role="alert">
@@ -225,8 +223,7 @@
                         <legend class="text-primary">Images</legend>
                         <div class="form-group">
                             <label for="imagenes">Images</label>
-                            <h3>Images with dropzone are not avaiblable in production by costs</h3>
-                           {{--}} <div id="dropzone" class="dropzone form-control"></div>{{--}}
+                           <div id="dropzone" class="dropzone form-control"></div>
                         </div>
                     </fieldset>
 

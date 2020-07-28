@@ -31,7 +31,7 @@ class EstablecimientoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   /* -------------------THIS IS LOCAL-HOST-------------------
+    {   //-------------------THIS IS LOCAL-HOST-------------------
         //validacion
         $data = $request->validate([
             'nombre' => 'required',
@@ -70,7 +70,7 @@ class EstablecimientoController extends Controller
             'apertura' => $data['apertura'],
             'cierre' => $data['cierre'],
             'uuid' => $data['uuid']
-        ]);
+        ]);*/
 
         //o asi
         $establecimiento = new Establecimiento($data);
@@ -78,10 +78,10 @@ class EstablecimientoController extends Controller
         $establecimiento->user_id = auth()->user()->id;
         $establecimiento->save();
 
-        return back()->with('estado','Your Information was saved');*/
+        return back()->with('estado','Your Information was saved');
 
         /////////////////////////////////PRODUCTION///////////////////////////////
-        $data = $request->validate([
+        /*$data = $request->validate([
             'nombre' => 'required',
             'categoria_id' => 'required|exists:App\Categoria,id',
             'direccion' => 'required',
@@ -112,7 +112,7 @@ class EstablecimientoController extends Controller
             'uuid' => $data['uuid']
         ]);
 
-        return back()->with('estado','Your Information was saved');
+        return back()->with('estado','Your Information was saved');*/
 
     }
 

@@ -74,7 +74,6 @@
                                 type="file"
                                 class="form-control @error('imagen_principal') is-invalid  @enderror"
                                 value="{{old('imagen_principal')}}"
-                                disabled
                             >  
                             <h6>This option is not available in production by costs</h6>
 
@@ -84,8 +83,8 @@
                                 </span>
                             @enderror
                         </div>
-                        <!--<img style="width:200px;" src="/storage/{{$establecimiento->imagen_principal}}">-->
-                        <img style="width:200px;" src="{{secure_asset("images/$establecimiento->imagen_principal.jpg")}}">
+                        <img style="width:200px;" src="/storage/{{$establecimiento->imagen_principal}}">
+                       <!--<img style="width:200px;" src="{{secure_asset("images/$establecimiento->imagen_principal.jpg")}}"-->
                     </fieldset>
 
                     <fieldset class="border p-4 mt-5">
@@ -227,8 +226,7 @@
                         <legend class="text-primary">Images:</legend>
                         <div class="form-group">
                             <label for="imagenes">Images</label>
-                            <!--<div id="dropzone" class="dropzone form-control"></div>-->
-                            <h3>Images with dropzone are not avaiblable in production by costs</h3>
+                            <div id="dropzone" class="dropzone form-control"></div>
                         </div>
                         @if(count($imagenes) > 0)
                             @foreach($imagenes as $imagen)
