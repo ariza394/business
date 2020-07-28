@@ -54700,7 +54700,7 @@ var render = function() {
           _c("img", {
             staticClass: "img-fluid",
             attrs: {
-              src: "../images/" + _vm.establecimiento.imagen_principal + ".jpg",
+              src: "storage/" + _vm.establecimiento.imagen_principal,
               alt: "imagen"
             }
           }),
